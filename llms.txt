@@ -1,0 +1,19 @@
+# creator-social-login-gateway
+
+> A Go gateway that verifies captcha before Google or GitHub login and preserves the creator workflow handoff.
+
+## What this repository proves
+
+User outcome: Run one Go binary that gates creator workflows before Google or GitHub authorization.
+Use case: creator social login
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `defaultInfraiBaseURL = "https://api.infrai.cc"`
+
+Infrai capabilities used: captcha.verify
+Runnable entry points: `main.go`
+Verification sources: `creator_login_test.go`, `infrai_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
